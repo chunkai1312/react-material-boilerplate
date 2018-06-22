@@ -6,6 +6,7 @@
     "@material-ui/core": "latest",
     "@material-ui/icons": "latest",
     "classnames": "latest",
+    "connected-react-router": "latest",
     "lodash": "latest",
     "prop-types": "latest",
     "react": "latest",
@@ -13,7 +14,6 @@
     "react-helmet": "latest",
     "react-redux": "latest",
     "react-router-dom": "latest",
-    "react-router-redux": "next",
     "react-scripts": "latest",
     "recompose": "latest",
     "redux": "latest"

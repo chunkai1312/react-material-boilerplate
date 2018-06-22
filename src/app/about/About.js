@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import compose from 'recompose/compose'
 import { Helmet } from 'react-helmet'
 import { withStyles } from '@material-ui/core/styles'
-import withRoot from '../components/withRoot'
-import HomePage from '../components/pages/HomePage'
+import withRoot from '../withRoot'
+import AboutPage from './AboutPage'
 
 const styles = {
   root: {
@@ -12,29 +12,30 @@ const styles = {
   }
 }
 
-class Home extends React.Component {
+class About extends React.Component {
   render () {
     const { classes } = this.props
+    const { activePage } = this.context
     return (
       <div className={classes.root}>
         <Helmet>
-          <title>{`React Material Boilerplate`}</title>
+          <title>{`${activePage.title} | React Material Boilerplate`}</title>
         </Helmet>
-        <HomePage />
+        <AboutPage />
       </div>
     )
   }
 }
 
-Home.propTypes = {
+About.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-Home.contextTypes = {
+About.contextTypes = {
   activePage: PropTypes.object.isRequired
 }
 
 export default compose(
   withRoot,
   withStyles(styles)
-)(Home)
+)(About)

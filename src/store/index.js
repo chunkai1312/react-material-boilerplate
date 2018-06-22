@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware, compose } from 'redux'
-import { routerMiddleware as createRouterMiddleware } from 'react-router-redux'
+import { routerMiddleware as createRouterMiddleware, connectRouter } from 'connected-react-router'
 import rootReducer from './reducers'
 
 export default function configureStore (history, preloadedState) {
@@ -18,7 +18,7 @@ export default function configureStore (history, preloadedState) {
     : compose
 
   const store = createStore(
-    rootReducer,
+    connectRouter(history)(rootReducer),
     preloadedState,
     composeEnhancers(
       applyMiddleware(...middlewares),

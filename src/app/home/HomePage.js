@@ -49,7 +49,7 @@ function HomePage (props) {
     <div className={classes.page}>
       <div className={classes.content}>
         <div className={classes.logoContainer}>
-          <img className={classes.logo} src={require('../../../assets/img/logo.svg')} alt="Logo" />
+          <img className={classes.logo} src={require('../../assets/img/logo.svg')} alt="Logo" />
         </div>
         <div className={classes.text}>
           <Typography variant="display2" component="h1" color="inherit" gutterBottom>

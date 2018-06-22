@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import find from 'lodash/find'
-import AppWrapper from './layout/AppWrapper'
+import AppWrapper from './shared/AppWrapper'
 import InfoIcon from '@material-ui/icons/Info'
 
 const pages = [{
